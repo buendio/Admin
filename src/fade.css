@@ -1,0 +1,50 @@
+.fadeTranslate {
+  width: 100%;
+}
+.fadeTranslate-enter {
+  width: 100%;
+    opacity: 0;
+    transform: translate(0, -3vh);
+    position: absolute;
+  }
+
+  .fadeTranslate-enter.fadeTranslate-enter-active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity 500ms ease-in 500ms, transform 500ms ease-in-out 500ms;
+  }
+
+  .fadeTranslate-exit {
+    width: 100%;
+    opacity: 1;
+    position: fixed;
+    transform: translate(0, 0);
+  }
+
+  .fadeTranslate-exit.fadeTranslate-exit-active {
+    opacity: 0;
+    /* transform: translate(0, 3vh); */
+    transition: opacity 300ms ease-in, transform 300ms ease-in-out;
+  }
+
+  .fix-container {
+    position: fixed;
+    width: 100%;
+  }
+.anime {
+  animation: trans 1s;
+}
+@keyframes trans {
+  0% {
+    transform: translate(0, -3vh);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, -3vh);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
